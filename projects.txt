@@ -1,0 +1,19 @@
+1. Name: My ATM Application
+   Description: A simple ATM simulation that accepts and processes a client's withdrawal, deposit, and balance inquiry.
+   Tech: JavaScript, HTML/CSS
+   Link: https://github.com/claireaicee/MyAtmApplication.git
+
+2. Name: Product Inventory System
+   Description: A management system that manages products, including adding products and tracking inventory.
+   Tech: PHP and MySQL
+   Link: https://github.com/claireaicee/Product-Inventory-System.git
+
+3. Name: Tenant Management System
+   Description: A system for estate tenants and administrators. This project is a collaboration with my groupmates.
+   Tech: JavaScript, Blade, CSS, PHP and MySQL
+   Link: https://github.com/JESSIEWANTSLEARN/Tenant-Crud-Operation.git
+
+4. Name: Task Manager Using React and Laravel
+   Description: A management system that manages tasks.
+   Tech: JavaScript, Blade, CSS, PHP and MySQL
+   Link: https://github.com/claireaicee/Task-Manager-using-React-and-Laravel.git
