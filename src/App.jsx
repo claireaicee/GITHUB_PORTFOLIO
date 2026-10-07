@@ -11,7 +11,7 @@ import ProjectCard from "./components/ProjectCard";
 
 const profile = {
   name: "Aicee Claire V. Villarete",
-  role: "Developer",
+  role: "Student Developer",
   description:
     "I build clean, practical, and user-focused applications while continuously learning and improving my development skills.",
   github: "https://github.com/claireaicee",
