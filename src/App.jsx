@@ -1,17 +1,14 @@
 import React from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 import ProjectCard from "./components/ProjectCard";
-
+import profileImage from "./components/assets/profile.jpg";
 /* =========================================================
    PERSONAL INFORMATION
-   =========================================================
-   Change only these values if you want to update your
-   personal information later.
-========================================================= */
+   ========================================================= */
 
 const profile = {
   name: "Aicee Claire V. Villarete",
-  role: "Student Developer",
+  role: "Developer",
   description:
     "I build clean, practical, and user-focused applications while continuously learning and improving my development skills.",
   github: "https://github.com/claireaicee",
@@ -29,7 +26,6 @@ const projects = [
     tech: "JavaScript, HTML/CSS",
     link: "https://github.com/claireaicee/MyAtmApplication",
   },
-
   {
     name: "Product Inventory System",
     description:
@@ -37,7 +33,6 @@ const projects = [
     tech: "PHP, MySQL",
     link: "https://github.com/claireaicee/Product-Inventory-System",
   },
-
   {
     name: "Tenant Management System",
     description:
@@ -45,18 +40,16 @@ const projects = [
     tech: "JavaScript, Blade, CSS, PHP, MySQL",
     link: "https://github.com/JESSIEWANTSLEARN/Tenant-Crud-Operation",
   },
-
   {
     name: "Task Manager Using React and Laravel",
-    description:
-      "A management system that manages tasks.",
+    description: "A management system that manages tasks.",
     tech: "JavaScript, Blade, CSS, PHP, MySQL",
     link: "https://github.com/claireaicee/Task-Manager-using-React-and-Laravel",
   },
 ];
 
 /* =========================================================
-   MAIN APP
+   APP
    ========================================================= */
 
 function App() {
@@ -68,57 +61,31 @@ function App() {
       ===================================================== */}
 
       <header className="nav">
-        <a
-          className="brand"
-          href="#top"
-          aria-label="Go to homepage"
-        >
-          &lt;dev /&gt;
+        <a className="brand" href="#top" aria-label="Go to homepage">
+          Aicee Claire V. Villarete
         </a>
 
-        <nav
-          className="nav-links"
-          aria-label="Main navigation"
-        >
-          <a href="#about">
-            About
-          </a>
-
-          <a href="#projects">
-            Projects
-          </a>
-
-          <a href="#contact">
-            Contact
-          </a>
+        <nav className="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
-
-
-      {/* =====================================================
-          MAIN CONTENT
-      ===================================================== */}
 
       <main id="top">
 
         {/* ===================================================
-            HERO SECTION
+            HERO
         =================================================== */}
 
         <section className="hero">
 
           <div className="hero-content">
-
-            <p className="eyebrow">
-              DEVELOPER PORTFOLIO
-            </p>
+            <p className="eyebrow">DEVELOPER PORTFOLIO</p>
 
             <h1>
               Hi, I’m{" "}
-              <span>
-                {profile.name}
-              </span>
-              .
+              <span>{profile.name}</span>.
               <br />
               I build things for the web.
             </h1>
@@ -129,7 +96,6 @@ function App() {
 
             <div className="hero-actions">
 
-              {/* View Projects Button */}
               <a
                 className="button primary"
                 href="#projects"
@@ -138,8 +104,6 @@ function App() {
                 <ArrowUpRight size={18} />
               </a>
 
-
-              {/* GitHub Button */}
               <a
                 className="button secondary"
                 href={profile.github}
@@ -151,26 +115,26 @@ function App() {
               </a>
 
             </div>
-
           </div>
 
+          {/* =================================================
+              PROFILE IMAGE
+          ================================================= */}
 
-          {/* Decorative Developer Circle */}
-
-          <div
-            className="hero-orb"
-            aria-hidden="true"
-          >
-            <div className="orb-inner">
-              &lt;/&gt;
+          <div className="hero-image-wrapper">
+            <div className="hero-image-holder">
+              <img
+                src={profileImage}
+                alt="Aicee Claire V. Villarete"
+                className="profile-image"
+              />
             </div>
           </div>
 
         </section>
 
-
         {/* ===================================================
-            ABOUT SECTION
+            ABOUT
         =================================================== */}
 
         <section
@@ -179,7 +143,6 @@ function App() {
         >
 
           <div>
-
             <p className="section-label">
               01 — ABOUT
             </p>
@@ -187,33 +150,29 @@ function App() {
             <h2>
               A little about me.
             </h2>
-
           </div>
-
 
           <div className="about-content">
 
             <p className="about-text">
-              I’m a CS student at Pamantasan ng Cabuyao who enjoys turning ideas
-              into functional software. I’m interested in
-              developing applications that are practical,
+              I’m a CS student at Pamantasan ng Cabuyao who enjoys
+              turning ideas into functional software. I’m interested
+              in developing applications that are practical,
               organized, and easy to use.
             </p>
 
             <p className="about-text secondary-text">
-              This portfolio highlights selected projects
-              from my GitHub, including web applications,
-              management systems, and projects built with
-              different technologies.
+              This portfolio highlights selected projects from my
+              GitHub, including web applications, management systems,
+              and projects built with different technologies.
             </p>
 
           </div>
 
         </section>
 
-
         {/* ===================================================
-            PROJECTS SECTION
+            PROJECTS
         =================================================== */}
 
         <section
@@ -224,7 +183,6 @@ function App() {
           <div className="section-heading">
 
             <div>
-
               <p className="section-label">
                 02 — PROJECTS
               </p>
@@ -232,11 +190,7 @@ function App() {
               <h2>
                 Selected work.
               </h2>
-
             </div>
-
-
-            {/* GitHub Link */}
 
             <a
               className="text-link"
@@ -249,13 +203,6 @@ function App() {
             </a>
 
           </div>
-
-
-          {/* =================================================
-              PROJECT GRID
-
-              Each project is passed into ProjectCard.jsx
-          ================================================= */}
 
           <div className="project-grid">
 
@@ -270,9 +217,8 @@ function App() {
 
         </section>
 
-
         {/* ===================================================
-            CONTACT SECTION
+            CONTACT
         =================================================== */}
 
         <section
@@ -289,11 +235,9 @@ function App() {
           </h2>
 
           <p className="contact-description">
-            Want to see more of my work?
-            Visit my GitHub to explore my
-            repositories and projects.
+            Want to see more of my work? Visit my GitHub to
+            explore my repositories and projects.
           </p>
-
 
           <div className="socials">
 
@@ -313,13 +257,11 @@ function App() {
 
       </main>
 
-
       {/* =====================================================
           FOOTER
       ===================================================== */}
 
       <footer>
-
         <span>
           © 2026 {profile.name}
         </span>
@@ -327,7 +269,6 @@ function App() {
         <span>
           Built with React &amp; Vite
         </span>
-
       </footer>
 
     </div>

@@ -2,31 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
     <meta
       name="description"
-      content="Developer portfolio showcasing GitHub projects."
+      content="Aicee Claire V. Villarete - Developer Portfolio"
     />
-    <title>Aicee Claire V. Villarete | Developer Portfolio</title>
+
+    <title>
+      Aicee Claire V. Villarete | Developer Portfolio
+    </title>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
 
-    <!-- Chatbase AI Chatbot -->
+    <!-- CHATBASE AI -->
     <script>
       (function () {
         if (
           !window.chatbase ||
           window.chatbase("getState") !== "initialized"
         ) {
-          window.chatbase = (...arguments) => {
+          window.chatbase = (...args) => {
             if (!window.chatbase.q) {
               window.chatbase.q = [];
             }
-            window.chatbase.q.push(arguments);
+
+            window.chatbase.q.push(args);
           };
 
           window.chatbase = new Proxy(window.chatbase, {
@@ -43,9 +55,14 @@
         const onLoad = function () {
           const script = document.createElement("script");
 
-          script.src = "https://www.chatbase.co/embed.min.js";
-          script.id = "t2bhy6GCHHKh_vAT-OUAm";
-          script.domain = "www.chatbase.co";
+          script.src =
+            "https://www.chatbase.co/embed.min.js";
+
+          script.id =
+            "t2bhy6GCHHKh_vAT-OUAm";
+
+          script.domain =
+            "www.chatbase.co";
 
           document.body.appendChild(script);
         };

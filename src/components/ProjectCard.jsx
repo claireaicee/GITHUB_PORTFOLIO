@@ -1,71 +1,34 @@
 import React from "react";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 function ProjectCard({ project }) {
-  if (!project) {
-    return null;
-  }
-
   return (
     <article className="project-card">
+      <div className="project-card-content">
+        <p className="project-number">PROJECT</p>
 
-      {/* Top */}
-      <div className="project-top">
+        <h3>{project.name}</h3>
 
-        <div className="repo-icon">
-          <Github size={20} />
-        </div>
-
-        <a
-          className="card-arrow"
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`Open ${project.name} on GitHub`}
-        >
-          <ArrowUpRight size={19} />
-        </a>
-
-      </div>
-
-
-      {/* Project Information */}
-      <div className="project-content">
-
-        <h3 className="repo-name">
-          {project.name}
-        </h3>
-
-        <p className="repo-description">
+        <p className="project-description">
           {project.description}
         </p>
 
+        <div className="project-bottom">
+          <span className="project-tech">
+            {project.tech}
+          </span>
+
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="project-link"
+            aria-label={`View ${project.name} on GitHub`}
+          >
+            <ArrowUpRight size={18} />
+          </a>
+        </div>
       </div>
-
-
-      {/* Technologies */}
-      <div className="tech-row">
-
-        <span className="language-dot"></span>
-
-        <span>
-          {project.tech}
-        </span>
-
-      </div>
-
-
-      {/* GitHub Link */}
-      <a
-        className="github-link"
-        href={project.link}
-        target="_blank"
-        rel="noreferrer"
-      >
-        View repository
-        <ArrowUpRight size={15} />
-      </a>
-
     </article>
   );
 }
